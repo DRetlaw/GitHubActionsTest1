@@ -1,1 +1,15 @@
+name: Testing1
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - Test1
+  pull_request:
+    branches:
+      - Test1
 
+jobs:
+  print_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World!"
